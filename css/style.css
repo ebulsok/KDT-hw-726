@@ -168,4 +168,8 @@ footer {
     header #snb .logo img {
         width: 70px;
     }
+
+    figure .text {
+        top: 28%;
+    }
 }
