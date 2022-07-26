@@ -1,0 +1,165 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Julius+Sans+One&display=swap');
+
+/* RESET */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh 3vw;
+    z-index: 1;
+}
+
+header a, header i {
+    color: #222;
+}
+
+/* LOGO */
+header #gnb a img {
+    width: 100px;
+}
+
+/* GNB */
+header #gnb {
+    display: flex;
+}
+
+header #gnb li {
+    margin: auto 20px;
+}
+
+header #gnb li a {
+    font: bold 15px/1 'Julius Sans One';
+    letter-spacing: 1px;
+}
+
+/* SNB */
+header #snb {
+    display: none;
+}
+
+header #snb .logo img {
+    width: 100px;
+}
+
+header #snb .btn_menu {
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    transform: translate(-50%, -50%);
+}
+
+header #snb .submenu {
+    display: block;
+    position: fixed;
+    right: 5vw;
+    padding: 10px 25px;
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: right;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+header #snb .submenu.hide {
+    opacity: 0;
+}
+
+header #snb .submenu li {
+    padding: 10px 0px;
+    font: bold 14px/1 'Julius Sans One';
+}
+
+header #snb .submenu li a i {
+    margin-left: 8px;
+}
+
+/* VIDEO */
+figure {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+figure video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+figure .text {
+    position: absolute;
+    width: 100%;
+    top: 38%;
+    text-align: center;
+}
+
+figure .text>p {
+    font: italic 9vw/1 'DM Serif Display';
+    color: white;
+    margin-bottom: 50px;
+    word-break: keep-all;
+    padding: 0 30px;
+}
+
+figure .text ul li {
+    margin-bottom: 10px;
+}
+
+figure .text ul li a p {
+    font: bold 1vw/1 'Julius Sans One';
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    font: bold 12px/1 'Julius Sans One';
+    color: #444;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 5vh 5vw;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+    header #gnb {
+        display: none;
+    }
+    
+    header #snb {
+        display: block;
+    }
+
+    figure .text p {
+        font-size: 90px;
+    }
+}
+
+@media screen and (max-width: 744px) {
+    figure .text {
+        top: 33%;
+    }
+}
