@@ -60,34 +60,57 @@ header #snb .logo img {
 }
 
 header #snb .btn_menu {
+    display: block;
     position: absolute;
     top: 50%;
     right: 5vw;
     transform: translate(-50%, -50%);
 }
 
-header #snb .submenu {
+header #snb .btn_menu.hide {
+    display: none;
+}
+
+.submenu {
     display: block;
     position: fixed;
-    right: 5vw;
-    padding: 10px 25px;
-    background-color: rgba(255, 255, 255, 0.4);
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: right;
     opacity: 1;
     transition: 0.4s;
+    z-index: 2;
 }
 
-header #snb .submenu.hide {
+.submenu.hide {
+    display: none;
     opacity: 0;
+    z-index: 0;
 }
 
-header #snb .submenu li {
-    padding: 10px 0px;
+.submenu .xmark {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 14px/1;
+}
+
+.submenu li {
+    padding: 20px 0px;
     font: bold 14px/1 'Julius Sans One';
 }
 
-header #snb .submenu li a i {
-    margin-left: 8px;
+.submenu li a {
+    color: #222;
+}
+
+.submenu li a i {
+    margin-left: 10px;
 }
 
 /* VIDEO */
@@ -126,7 +149,7 @@ figure .text ul li {
 }
 
 figure .text ul li a p {
-    font: bold 1vw/1 'Julius Sans One';
+    font: bold 14px/1 'Julius Sans One';
     color: white;
     letter-spacing: 1px;
 }
