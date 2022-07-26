@@ -163,3 +163,9 @@ footer {
         top: 33%;
     }
 }
+
+@media screen and (max-width: 450px) {
+    header #snb .logo img {
+        width: 70px;
+    }
+}
